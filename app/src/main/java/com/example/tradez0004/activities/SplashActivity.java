@@ -1,9 +1,11 @@
-package com.example.tradez0004;
+package com.example.tradez0004.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+
+import com.example.tradez0004.activities.MainActivity;
 
 /**
  * Created by IdrissZ on 24-Dec-17.

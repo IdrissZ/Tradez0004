@@ -1,4 +1,4 @@
-package com.example.tradez0004;
+package com.example.tradez0004.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,8 +11,7 @@ import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
 
-import com.example.tradez0004.activities.RegisterActivity;
-import com.example.tradez0004.activities.UsersListActivity;
+import com.example.tradez0004.R;
 import com.example.tradez0004.helpers.InputValidation;
 import com.example.tradez0004.sql.DatabaseHelper;
 
@@ -118,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 , textInputEditTextPassword.getText().toString().trim())) {
 
 
-            Intent accountsIntent = new Intent(activity, UsersListActivity.class);
+            Intent accountsIntent = new Intent(activity, HomepageActivity.class);
             accountsIntent.putExtra("EMAIL", textInputEditTextEmail.getText().toString().trim());
             emptyInputEditText();
             startActivity(accountsIntent);

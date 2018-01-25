@@ -1,4 +1,4 @@
-package com.example.tradez0004;
+package com.example.tradez0004.activities;
 
 import android.app.Application;
 import android.os.SystemClock;

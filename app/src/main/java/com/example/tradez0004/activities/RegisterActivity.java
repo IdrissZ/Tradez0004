@@ -13,7 +13,6 @@ import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
 
-import com.example.tradez0004.MainActivity;
 import com.example.tradez0004.R;
 import com.example.tradez0004.helpers.InputValidation;
 import com.example.tradez0004.model.User;
