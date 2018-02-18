@@ -54,9 +54,9 @@ public class InputValidation {
      * @param message
      * @return
      */
-    public boolean isInputEditTextEmail(TextInputEditText textInputEditText, TextInputLayout textInputLayout, String message) {
+    public boolean isInputEditTextNumber(TextInputEditText textInputEditText, TextInputLayout textInputLayout, String message) {
         String value = textInputEditText.getText().toString().trim();
-        if (value.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(value).matches()) {
+        if (value.isEmpty() || !android.util.Patterns.PHONE.matcher(value).matches()) {
             textInputLayout.setError(message);
             hideKeyboardFrom(textInputEditText);
             return false;

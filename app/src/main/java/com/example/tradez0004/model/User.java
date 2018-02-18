@@ -7,7 +7,7 @@ package com.example.tradez0004.model;
 public class User {
     private int id;
     private String name;
-    private String email;
+    private String number;
     private String password;
 
     public int getId() {
@@ -26,12 +26,12 @@ public class User {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getNumber() {
+        return number;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setNumber(String number) {
+        this.number = number;
     }
 
     public String getPassword() {

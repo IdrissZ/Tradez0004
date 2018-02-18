@@ -20,10 +20,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private NestedScrollView nestedScrollView;
 
-    private TextInputLayout textInputLayoutEmail;
+    private TextInputLayout textInputLayoutNumber;
     private TextInputLayout textInputLayoutPassword;
 
-    private TextInputEditText textInputEditTextEmail;
+    private TextInputEditText textInputEditTextNumber;
     private TextInputEditText textInputEditTextPassword;
 
     private AppCompatButton appCompatButtonLogin;
@@ -51,10 +51,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         nestedScrollView = (NestedScrollView) findViewById(R.id.nestedScrollView);
 
-        textInputLayoutEmail = (TextInputLayout) findViewById(R.id.textInputLayoutEmail);
+        textInputLayoutNumber = (TextInputLayout) findViewById(R.id.textInputLayoutNumber);
         textInputLayoutPassword = (TextInputLayout) findViewById(R.id.textInputLayoutPassword);
 
-        textInputEditTextEmail = (TextInputEditText) findViewById(R.id.textInputEditTextEmail);
+        textInputEditTextNumber = (TextInputEditText) findViewById(R.id.textInputEditTextNumber);
         textInputEditTextPassword = (TextInputEditText) findViewById(R.id.textInputEditTextPassword);
 
         appCompatButtonLogin = (AppCompatButton) findViewById(R.id.appCompatButtonLogin);
@@ -103,29 +103,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * This method is to validate the input text fields and verify login credentials from SQLite
      */
     private void verifyFromSQLite() {
-        if (!inputValidation.isInputEditTextFilled(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))) {
+        if (!inputValidation.isInputEditTextFilled(textInputEditTextNumber, textInputLayoutNumber, getString(R.string.error_message_number))) {
             return;
         }
-        if (!inputValidation.isInputEditTextEmail(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))) {
+        if (!inputValidation.isInputEditTextNumber(textInputEditTextNumber, textInputLayoutNumber, getString(R.string.error_message_number))) {
             return;
         }
-        if (!inputValidation.isInputEditTextFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_message_email))) {
+        if (!inputValidation.isInputEditTextFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_message_number))) {
             return;
         }
 
-        if (databaseHelper.checkUser(textInputEditTextEmail.getText().toString().trim()
+        if (databaseHelper.checkUser(textInputEditTextNumber.getText().toString().trim()
                 , textInputEditTextPassword.getText().toString().trim())) {
 
 
             Intent accountsIntent = new Intent(activity, UsersListActivity.class);
-            accountsIntent.putExtra("EMAIL", textInputEditTextEmail.getText().toString().trim());
+            accountsIntent.putExtra("PHONE NUMBER", textInputEditTextNumber.getText().toString().trim());
             emptyInputEditText();
             startActivity(accountsIntent);
 
 
         } else {
             // Snack Bar to show success message that record is wrong
-            Snackbar.make(nestedScrollView, getString(R.string.error_valid_email_password), Snackbar.LENGTH_LONG).show();
+            Snackbar.make(nestedScrollView, getString(R.string.error_valid_number_password), Snackbar.LENGTH_LONG).show();
         }
     }
 
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * This method is to empty all input edit text
      */
     private void emptyInputEditText() {
-        textInputEditTextEmail.setText(null);
+        textInputEditTextNumber.setText(null);
         textInputEditTextPassword.setText(null);
     }
 }

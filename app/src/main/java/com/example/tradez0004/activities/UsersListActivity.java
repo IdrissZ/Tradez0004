@@ -62,8 +62,8 @@ public class UsersListActivity extends AppCompatActivity {
         recyclerViewUsers.setAdapter(usersRecyclerAdapter);
         databaseHelper = new DatabaseHelper(activity);
 
-        String emailFromIntent = getIntent().getStringExtra("EMAIL");
-        textViewName.setText(emailFromIntent);
+        String numberFromIntent = getIntent().getStringExtra("NUMBER");
+        textViewName.setText(numberFromIntent);
 
         getDataFromSQLite();
     }
