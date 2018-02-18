@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 , textInputEditTextPassword.getText().toString().trim())) {
 
 
-            Intent accountsIntent = new Intent(activity, UsersListActivity.class);
+            Intent accountsIntent = new Intent(MainActivity.this, HomeActivity.class);
             accountsIntent.putExtra("PHONE NUMBER", textInputEditTextNumber.getText().toString().trim());
             emptyInputEditText();
             startActivity(accountsIntent);
