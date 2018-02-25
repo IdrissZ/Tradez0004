@@ -5,6 +5,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.example.tradez0004.R;
 
@@ -36,4 +37,6 @@ public class HomeActivity extends AppCompatActivity {
             }
 
     });}
+
+
 }
