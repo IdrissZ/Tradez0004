@@ -8,22 +8,36 @@
     tools:context="com.example.tradez0004.activities.HomeActivity">
 
 
+    <Button
+        android:id="@+id/button_post"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="35dp"
+        android:text="Menu"
+        android:textColor="@color/colorPrimaryDark"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_post"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|left"
 
-        android:clickable="true"
-        android:visibility="visible"
-        app:backgroundTint="@color/colorPrimaryDark"
-        app:fabSize="normal"
-        app:srcCompat="@android:drawable/ic_input_add"
-        tools:srcCompat="@android:drawable/ic_menu_info_details"
+        android:layout_marginBottom="50dp"
         android:layout_marginLeft="50dp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:clickable="true"
+        android:tint="@color/colorPrimaryDark"
+        android:visibility="visible"
+        app:backgroundTint="@color/colorBackground"
+        app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="50dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:srcCompat="@android:drawable/ic_menu_info_details" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_menu"
@@ -31,17 +45,30 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
 
-        android:clickable="true"
-        android:visibility="visible"
-        app:backgroundTint="@color/colorPrimaryDark"
-        app:fabSize="normal"
-        app:srcCompat="@android:drawable/ic_menu_info_details"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="50dp"
         android:layout_marginRight="50dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        android:clickable="true"
+        android:tint="@color/colorPrimary"
+        android:visibility="visible"
+        app:backgroundTint="@color/colorBackground"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:rippleColor="@color/colorPrimary"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
 
-
+    <Button
+        android:id="@+id/button_menu"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post Ad"
+        android:textColor="@color/colorPrimaryDark"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="35dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
